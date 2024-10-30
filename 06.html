@@ -14,6 +14,7 @@
     }
     header{
         display: inline-block;
+        float: left;
         width: 1280px;
         height: 100px;
         background-color: bisque;
@@ -26,24 +27,31 @@
         height: 30px;
         display: inline-block;
         background-color: burlywood;
+        float: left;
+        padding: 10px;
     }
     section{
         width: 70%;
         height: 400px;
         display: inline-block;
         background-color: coral;
+        padding-top: 10px;
+        box-sizing: border-box;
+        float: left;
     }
     aside{
         width: 29%;
         height: 400px;
-        display: inline-block;
-        background-color: chocolate;
+        /* display: inline-block; */
+        float: left;
+        background-color:darkseagreen;
     }
     #display{   /*아이디를 만들었으니 #*/
         display: inline-block;  
         width: 100%;
         height: 200px;
-        background-color:palegoldenrod;
+        background-color:darksalmon;
+        /* box-sizing: border-box; */
     }
     footer{     /* 태그의 안에 들어가는 사항들은 object*/
         display: inline-block;
@@ -75,8 +83,18 @@
         background-color: snow;
     }
     nav ul{
-        /*border: 1px solid;*/
+        /* border: 1px solid; */
         margin-top: 3px;
+    }
+    .display_01{
+        width: 24%;
+        height: 150px;
+        margin-left: 10px;
+        float: left;
+        border: 1px solid;
+        margin-top: 25px;
+        padding-left: 10px;
+        box-sizing: border-box;
     }
 </style>
 <body>  <!-- 태그들의 부모가 body -->
@@ -101,9 +119,43 @@
             <li>환경설정</li>
         </ul>
     </nav>
-    <section> 그림이 들어갈 자리</section>
+    <section> 
+        <div>
+            <img src="img/닥순트 아이스크림.png">
+            <img src="img/닥순트우산.png">
+            <img src="img/닥순트목욕.png">
+            <img src="img/닥순트아메리카노.png">
+            <!--개발자는 src에서 상대경로(현재 위치에 따라)와 
+            절대경로(경로가 루트(시작점)부터 지정)를 숙지한다.
+            이미지 주소는 로컬에 있는 이미지나 웹이 있는 이미지 모두 가능
+            웹의 이미지는 저작권을 조심해야함, 절대경로는 다른 사람이 사진을 볼 수 없음
+            vs code에 저장하는 상대경로를 이용하는게 가장 좋음-->
+            <span></span>
+        </div>
+    </section>
     <aside>로그인 정보</aside>
-    <div id="display"></div>
+    <div id="display">
+        <div class="display_01">
+            <h3> 닥스훈트 </h3>
+            <hr>
+            <p>닥스훈트 귀여워</p>
+        </div>
+        <div class="display_01">
+            <h3> 닥스훈트 </h3>
+            <hr>
+            <p>닥스훈트 귀여워</p>
+        </div>
+        <div class="display_01">
+            <h3> 닥스훈트 </h3>
+            <hr>
+            <p>닥스훈트 귀여워</p>
+        </div>
+        <div class="display_01">
+            <h3> 닥스훈트 </h3>
+            <hr>
+            <p>닥스훈트 귀여워</p>
+        </div>
+    </div>
     <footer>개발자 정보</footer>
 </body>
 </html>
