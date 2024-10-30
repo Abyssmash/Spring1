@@ -2,10 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--문서의 문자의 인코딩 방식: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- table 태그
+        1.row   -> <tr>
+        2.column    -> <td>
+        3.row를 합치는 것 -> rowspan
+        4.col 합치는 것 -> colspan
+    -->
+    <style>
+        table{
+            border: 1px solid;
+            width: 500px;
+            height: 150px;
+        }
+        tr, th, td{
+            border: 1px solid;
+        }
+        td{
+            text-align: center;
+        }
+        th{
+            background-color:lightgreen;
+        }
+        th:hover{
+            background-color:cadetblue;
+        }
+
+    </style>
+    <table>
+        <tr><th>번호</th><th>이름</th><th>매력</th><th>수정</th></tr>
+        <tr><td>꼬</td><td rowspan="2">꼬</td><td>깔</td><td>수정</td></tr>
+        <tr><td>깔</td><td colspan="2">깔</td></tr>
+    </table>
+    <table> <!--login table-->
+        <tr><td colspan="2">회원이 되어주셔서 감사합니다.</td></tr>
+        <tr><td>ID</td><td><input type="text"></td></tr>
+        <tr><td>PASSWORD</td><td><input type="password"></td></tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="가입">
+                <input type="submit" value="로그인">
+            </td>
+        </tr>
+    </table>
 </body>
 </html>

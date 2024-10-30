@@ -96,6 +96,28 @@
         padding-left: 10px;
         box-sizing: border-box;
     }
+    aside div{
+            width: 300px;
+            height: 100px;
+            background-color:hotpink;
+        }
+        table{
+            border: 1px solid;
+            width: 300px;
+            height: 100px;
+        }
+        tr, th, td{
+            border: 1px solid;
+        }
+        td{
+            text-align: center;
+        }
+        th{
+            background-color:lightgreen;
+        }
+        th:hover{
+            background-color:cadetblue;
+        }
 </style>
 <body>  <!-- 태그들의 부모가 body -->
     <!--<div id=""header></div>-->
@@ -133,29 +155,43 @@
             <span></span>
         </div>
     </section>
-    <aside>로그인 정보</aside>
-    <div id="display">
-        <div class="display_01">
-            <h3> 닥스훈트 </h3>
-            <hr>
-            <p>닥스훈트 귀여워</p>
+    <aside>
+        <div>
+            <table> <!--login table-->
+                <tr><td colspan="2">회원이 되어주셔서 감사합니다.</td></tr>
+                <tr><td>ID</td><td><input type="text"></td></tr>
+                <tr><td>PASSWORD</td><td><input type="password"></td></tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="가입">
+                        <input type="submit" value="로그인">
+                    </td>
+                </tr>
+            </div>
+        </table>
+    </aside>
+        <div id="display">
+            <div class="display_01">
+                <h3> 닥스훈트 </h3>
+                <hr>
+                <p>닥스훈트 귀여워</p>
+            </div>
+            <div class="display_01">
+                <h3> 닥스훈트 </h3>
+                <hr>
+                <p>닥스훈트 귀여워</p>
+            </div>
+            <div class="display_01">
+                <h3> 닥스훈트 </h3>
+                <hr>
+                <p>닥스훈트 귀여워</p>
+            </div>
+            <div class="display_01">
+                <h3> 닥스훈트 </h3>
+                <hr>
+                <p>닥스훈트 귀여워</p>
+            </div>
         </div>
-        <div class="display_01">
-            <h3> 닥스훈트 </h3>
-            <hr>
-            <p>닥스훈트 귀여워</p>
-        </div>
-        <div class="display_01">
-            <h3> 닥스훈트 </h3>
-            <hr>
-            <p>닥스훈트 귀여워</p>
-        </div>
-        <div class="display_01">
-            <h3> 닥스훈트 </h3>
-            <hr>
-            <p>닥스훈트 귀여워</p>
-        </div>
-    </div>
     <footer>개발자 정보</footer>
 </body>
 </html>
