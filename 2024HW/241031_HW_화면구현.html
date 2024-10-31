@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 1280px;
+        height: 1080px;
+        background-color: rgb(206, 245, 255);
+    }
+    header{
+        width: 1280px;
+        height: 80px;
+        float: left;
+        margin: 30px;
+        box-sizing: border-box;
+        padding-right: 300px;
+    }
+    nav{
+        width: 1280px;
+        height: 150px;
+        float: left;
+        text-align: center;
+        margin-bottom: 100px;
+        box-sizing: border-box;
+    }
+    section{
+        width: 1280px;
+        height: 500px;
+        box-sizing: border-box;
+        text-align: center;
+        float: left;
+        display: flex; 
+        margin-left: 500px;
+        
+    }
+    .selectBox{
+        position: relative;
+        width:150px;
+        height: 35px;
+        border-radius: 10px;
+        border: 4px solid rgb(0, 89, 255);
+        background-size: 20x;
+        cursor: pointer;
+        float: right;
+    }
+    .selectBox::after{
+        content: '';
+        display: block;
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 35px;
+        background: rgb(0, 89, 255);
+    }
+    .selectBox .label{
+        display: flex;
+        align-items: center;
+        width: inherit;
+        height: inherit;
+        border: 0 none;
+        outline: 0 none;
+        padding-left: 15px;
+        background: transparent;
+        cursor: pointer;
+    }
+    .selectBox .optionList{
+        position: absolute;
+        top: 28px;
+        left: 0;
+        width: 100%;
+        background: rgb(0, 89, 255);
+        color: #fff;
+        list-style-type: none;
+        padding: 0;
+        border-radius: 6px;
+        overflow: hidden;
+        max-height: 0;
+        transition: .3s ease-in;
+    }
+    .selectBox.active .optionList{
+        max-height: 500px;
+    }
+    .selectBox .optionItem{
+        border-bottom: 1px dashed rgb(255, 206, 206);
+        padding: 5px 15px 5px;
+        transition: .1s;
+    }
+    .selectBox .optionItem:hover{
+        background: rgb(238, 240, 128);
+    }
+    .selectBox .optionItem:last-child{
+        border-bottom: 0 none;
+    }
+    .login{
+        width: 230px;
+        height: 230px;
+        text-align: center;
+        box-sizing: border-box;
+        /* border: 1px solid; */
+    }
+    .login input[type="text"]{
+        color: grey;
+        border-radius: 10px;
+        border: 4px solid rgb(0, 89, 255);
+        padding-top: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
+    .login a{
+        background-color: rgb(72, 136, 255);
+        color: #fff;
+        border: 4px solid rgb(72, 136, 255);
+        font-size: 16px;
+        text-align: center;
+        width: 200px;
+        height: 30px;
+        float: left;
+        margin-left: 15px;
+    }
+    .login input[type="checkbox"]{
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        position:relative;
+    }
+    .login label[for="check"]{
+        text-align: center;
+
+    }
+
+</style>
+<body>
+    <header>
+        <div class="selectBox">
+            <button class="label">한국어</button>
+            <ul class="optionList">
+                <li class="optionItem">English</li>
+                <li class="optionItem">中国人</li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <img src="D:\html\img\지니램프.png" width: 200px height="200px">
+    </nav>
+    <section>
+        <div class="login">
+            <input type="text" placeholder="아이디 또는 전화번호">
+            <input type="text" placeholder="비밀번호">   
+            <input type="checkbox" id="check1">
+                <label for="check1">아이디 저장</label>
+                <a class="login" href="#">로그인</a>
+        </div>
+    </div>
+    </section>
+
+    <aside>
+
+    </aside>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
