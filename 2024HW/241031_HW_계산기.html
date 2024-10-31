@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 1280px;
+        height: 1080px;
+    }
+    header{
+        width: 400px;
+        height: 500px;
+        border: 2px solid;
+        background-color: #ffa7dd;
+    }
+    .calculator{
+        width: 400px;
+        height: 500px;
+        text-align: center;
+    }
+    .calculator input[type="button"]{
+        width: 75px;
+        height: 75px;
+    }
+    .calculator input[type="text"]{
+        width: 270px;
+        height: 50px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        border: 2px solid;
+    }
+</style>
+<body>
+    <h1>계산기</h1>
+    <ul>
+        <li>1 2 3</li>
+        <li>4 5 6</li>
+        <li>7 8 9</li>
+        <li>0 + -</li>
+        <li>x  = </li>
+        <li>형태로 만들기</li>
+        <li>위에 텍스트 필드를 하나 만들어 입력하는 값이 나오게 하기</li>
+    </ul>
+    <header>
+        <div class="calculator">
+                <input type="text" id="합계"><br>
+                <input type="button" id="7" value=7>
+                <input type="button" id="8" value=8>
+                <input type="button" id="9" value=9>
+                <input type="button" id="n" value="/"><br>
+                <input type="button" id="4" value=4>
+                <input type="button" id="5" value=5>
+                <input type="button" id="6" value=6>
+                <input type="button" id="x" value="x"><br>
+                <input type="button" id="1" value=1>
+                <input type="button" id="2" value=2>
+                <input type="button" id="3" value=3>
+                <input type="button" id="m" value="-"><br>
+                <input type="button" id="0" value=0>
+                <input type="button" id="c" value="c">
+                <input type="button" id="e" value="=">
+                <input type="button" id="p" value="+">
+
+        </div>
+    </header>
+</body>
+</html>
+<script>
+    function test(){
+        alert();    // 총 합계
+
+    }
+</script>
