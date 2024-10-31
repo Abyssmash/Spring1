@@ -1,0 +1,29 @@
+Java Script
+
+1. 선언문: var, let, const (스코프 구분하기)
+2. 연산자: ==, ===
+
+const = 상수 / 자바에는 final와 의미가 같다.
+                값이 변하지 않는 것
+
+var는 값이 할당될때 타입이 정의된다. 
+var a = 1   / a는 int
+var b = 'b' / b는 String
+
+a+1 = 2
+b+1 = 11
+
+* 심화 *
+- 선언문 정의 요약 
+- 선언문 샘플 읽고 이해하기
+- 손코딩 해보기
+- query selector 공부하기
+- document.getelement 공부하기
+
+a==b : 값이 같다.           = true
+a===b : 자료형까지 같다.    = false
+
+ID = #
+Class = .
+Tag = <>    / TagNames : 선택한 태그를 다 가져옴 그래서 s가 붙음 , 배열로 저장하고 있다
+
