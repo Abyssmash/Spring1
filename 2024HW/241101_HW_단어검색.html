@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="t">검색어가 나올 위치</h2>
+    검색창 <input type="text" id="sword">
+    <input type="button" id="s" value="검색"><br>
+    단어 갯수<input type="text" id="pword">
+    <input type="button" id="p" value="확인">
+</body>
+</html>
+<script>
+    function sword(){
+        var allS = document.getElementById("text");
+        c= allS.innerText
+        for(let i = 0; allS.length >0; i++){
+            if(allS.length == c){
+                alert("t")
+            }
+        }
+    }
+</script>
+<!--
+과제 1: 검색어가 모두 몇개인지 카운팅 하시오.
+과제 2: 검색어는 배경을 노란색으로 색칠하세요.
+-->

@@ -16,19 +16,19 @@
 <body>
     <h2>계산기</h2>
     수식<input type="text" id="k"><br>
-    <div class="btn" onclick="cal(1)">1</div>
-    <div class="btn" onclick="cal(2)">2</div>
-    <div class="btn" onclick="cal(3)">3</div><br>
-    <div class="btn" onclick="cal(4)">4</div>
-    <div class="btn" onclick="cal(5)">5</div>
-    <div class="btn" onclick="cal(6)">6</div><br>
-    <div class="btn" onclick="cal(7)">7</div>
-    <div class="btn" onclick="cal(8)">8</div>
-    <div class="btn" onclick="cal(9)">9</div><br>
-    <div class="btn" onclick="cal(0)">0</div>
-    <div class="btn" onclick="cal('+')">+</div>
-    <div class="btn" onclick="cal('-')">-</div><br>
-    <div class="btn" onclick="cal('=')">=</div>
+    <div class="btn">1</div>
+    <div class="btn">2</div>
+    <div class="btn">3</div><br>
+    <div class="btn">4</div>
+    <div class="btn">5</div>
+    <div class="btn">6</div><br>
+    <div class="btn">7</div>
+    <div class="btn">8</div>
+    <div class="btn">9</div><br>
+    <div class="btn">0</div>
+    <div class="btn">+</div>
+    <div class="btn">-</div><br>
+    <div class="btn">=</div>
 </body>
 </html>
 <script>
@@ -44,26 +44,52 @@
     // 함수 영역이 아닙니다. 문서가 로딩될 때
     // 여기서 작성하는 코드는 실행이 된다는 의미
     // 함수로 작성한 코드는 콜이 될 때 실행되는 것
+
+    // callback 함수, 람다식 검색해보기
     
-    // 리스너 등록
-    document.getElementsByClassName("btn")[0].addEventListener('click',ttt) // callback 
+    // 리스너 등록 <람다식 활용> - 함수를 간결하게 표현한 것
+    //                           코드를 여러 줄 처리하기 위해
+    //                           함수를 묶어서 정의하는 경우,
+    //                           코드의 재사용성보다, 간단한 기능 정의
+
+    // 이벤트 등록, 이벤트 처리시 일반적으로 람다식을 많이 사용한다.
+    //document.getElementsByClassName("btn")[0].addEventListener('click',()=>{cal(1)})
+
+    // 계산기에서 모든 버튼은 이벤트에 등록되어야 한다.
+    // HTML에서 onclick을 하던, 자바스크립트에서 리스너 등록을 해야한다.
+    // 이번 예제는 자바스크립트에서 리스너를 등록하겠습니다.
+    var allBtn = document.getElementsByClassName("btn")
+    for(let i = 0; i < allBtn.length; i++){
+        //console.log(allBtn[i]);
+        let s = allBtn[i].innerHTML
+        allBtn[i].addEventListener('click',()=>{cal(s)})
+
+    }
+
+    /*
+    //document.getElementsByClassName("btn")[0].addEventListener('click',()=>{cal(1)}) 
+    // > 람다식 다시 call을 호출
+    //document.getElementsByClassName("btn")[1].addEventListener('click',ttt) 
+    // > callback
+    //document.getElementsByClassName("btn")[2].addEventListener('click',() =>{alert("tt aaa")}) 
+    // > 람다식 '클릭'이라는 가벼운 이벤트에 사용 
+    document.getElementsByClassName("btn")[3].addEventListener('click',() =>{alert("aaa")}) 
     function ttt(){
         alert("aaa")
     }
+        */
 
-
-
-    function cal(a){
-        // alert(a)
-        if(a=='='){
-            let ab = document.getElementById('k')
-            let c = ab.innerText
-            ab.innerText = eval(c)
-        }else{
-            let ab = document.getElementById('k')
-            // alert(ab.innerText)
-            ab.innerText = ab.innerText + a
+    // function cal(a){
+    //     // alert(a)
+    //     if(a=='='){
+    //         let ab = document.getElementById('k')
+    //         let c = ab.innerText
+    //         ab.innerText = eval(c)
+    //     }else{
+    //         let ab = document.getElementById('k')
+    //         // alert(ab.innerText)
+    //         ab.innerText = ab.innerText + a
             
-        }
-    }
+    //     }
+    // }
 </script>
