@@ -6,25 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    <h2 id="t">검색어가 나올 위치</h2>
+    검색 내용:<span id="t"><br>
     검색창 <input type="text" id="sword">
     <input type="button" id="s" value="검색"><br>
-    단어 갯수<input type="text" id="pword">
+    단어 갯수 <input type="text" id="pword">
     <input type="button" id="p" value="확인">
 </body>
 </html>
 <script>
-    function sword(){
-        var allS = document.getElementById("text");
-        c= allS.innerText
-        for(let i = 0; allS.length >0; i++){
-            if(allS.length == c){
-                alert("t")
-            }
-        }
+    var w = document.getElementById("sword").value;
+    for(let i=0; i < w.length; i++){
+        console.log(w[i])
+        let t = w[i].innerHTML
+        w[i].addEventListener('click',()=>{t})
     }
+
+    //Number(b[0].value) (문자열을 숫자로 바꿔주는 함수)
 </script>
 <!--
 과제 1: 검색어가 모두 몇개인지 카운팅 하시오.
 과제 2: 검색어는 배경을 노란색으로 색칠하세요.
+-->
+
+<!--순서
+1. 검색어를 입력하고 검색을 누르면 입력한 글자가 출력됨
+ 검색어를 입력하고 검색을 누르면 호출
+2. 단어갯수 확인("p")을 누르면 검색어의 단어를 센 수가 "pword"에 출력됨
+ 호출된 함수는 글자를 세어줌
+ 단어 갯수에서 출력
 -->
