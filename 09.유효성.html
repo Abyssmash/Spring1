@@ -19,7 +19,15 @@
         let id = document.getElementById('id').value;
         let pwd = document.getElementById('pwd').value;
         // alert(id+"/"+pwd);   스크립트는 주석이 //임
-        id.
+        // console.log(id.length);
+        if (id.length < 8){
+            alert('id는 8글자 이상이어야 합니다.');
+            return;
+        }
+        if(pwd.length < 4){
+            alert('pwd는 4글자 이상이어야 합니다.');
+            return;
+        }
     }
 </script>
 </html>

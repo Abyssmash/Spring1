@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .btn{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 1px solid;
+    }
+</style>
+<body>
+    <h2>계산기</h2>
+    수식<input type="text" id="k"><br>
+    <div class="btn" onclick="cal(1)">1</div>
+    <div class="btn" onclick="cal(2)">2</div>
+    <div class="btn" onclick="cal(3)">3</div><br>
+    <div class="btn" onclick="cal(4)">4</div>
+    <div class="btn" onclick="cal(5)">5</div>
+    <div class="btn" onclick="cal(6)">6</div><br>
+    <div class="btn" onclick="cal(7)">7</div>
+    <div class="btn" onclick="cal(8)">8</div>
+    <div class="btn" onclick="cal(9)">9</div><br>
+    <div class="btn" onclick="cal(0)">0</div>
+    <div class="btn" onclick="cal('+')">+</div>
+    <div class="btn" onclick="cal('-')">-</div><br>
+    <div class="btn" onclick="cal('=')">=</div>
+</body>
+</html>
+<script>
+    // 이벤트 처리를 위한 리스너: 이벤트 리스너, 마우스 리스너 등
+    // 지금 사용해 본 것은: click, change
+    // 마우스 동작은: mouseup, mousedown
+    // 키보드 동작도 있다..
+
+    // 리스너를 등록하는 방법은 크게 2가지
+    // 1. html 태그에 함수를 지정하는 방법 (10.계산기.html)
+    // 2. 자바스크립트에서 리스너에 등록하는 방법
+    
+    // 함수 영역이 아닙니다. 문서가 로딩될 때
+    // 여기서 작성하는 코드는 실행이 된다는 의미
+    // 함수로 작성한 코드는 콜이 될 때 실행되는 것
+    
+    // 리스너 등록
+    document.getElementsByClassName("btn")[0].addEventListener('click',ttt) // callback 
+    function ttt(){
+        alert("aaa")
+    }
+
+
+
+    function cal(a){
+        // alert(a)
+        if(a=='='){
+            let ab = document.getElementById('k')
+            let c = ab.innerText
+            ab.innerText = eval(c)
+        }else{
+            let ab = document.getElementById('k')
+            // alert(ab.innerText)
+            ab.innerText = ab.innerText + a
+            
+        }
+    }
+</script>
