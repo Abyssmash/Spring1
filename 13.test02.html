@@ -9,37 +9,56 @@
 <body>
     <h1> 주문메뉴 </h1>
     <div id="info"></div>
-    
+
     메뉴선택 <input type="text" id="inputMenu">
     수량 <input type="text" id="inputQuantity">개
     <input type="button" onclick="order()" value="주문">    
     <br>주문정보 
     <div id="order_info">
-        <table id = "orderList">
+        <table id = "orderList" style="margin: 10px;">
             <tr>
                 <th>선택</th><th>메뉴</th><th>수량</th>
             </tr>
         </table>
+        <button id = "deleteBtn">선택 삭제</button>
     </div>
     <hr>
 </body>
 <script>
+    document.getElementById("deleteBtn").addEventListener('click',()=>{
+        // element를 지정하여 이벤트 리스너 처리, 처리는 람다식으로 코딩
+        //alert("삭제삭제삭제")
+        //alert(orderList.rows.length);
+        for(let i = 1; i < orderList.rows.length; i++){ // i가 1일때부터 주문정보임
+                                                        // 0으로 설정할 경우 객체를 인식할 수 없음
+                                                        // 1은 선택 메뉴 수량
+            //console.log(orderList.rows[i]);
+            //console.log(orderList.rows[i].cells[0].children[0]);
+            if(orderList.rows[i].cells[0].children[0].checked){
+                orderList.deleteRow(i)
+                i--;
+            }
+        }
+    });
+    //jQuery 설치는 cdn 방식으로
+
     var menu = ['짜장면','볶음밥','탕수육']
     menu.push('군만두') // 메뉴 추가
-    var pan = document.getElementsById('info');
+    var pan = document.getElementById('info');
     // alert(menu[0]);
     var menu_list='';
     // for(let i = 0; i < menu.length; i++){
     //     menu_list += menu[i] +"/"
     // }
     for( m of menu ){
-        menu_list += m +" /"
+        menu_list += m +" / "
     }
     // alert(menu_list);
     pan.innerHTML = menu_list
 
     function order(){
         let input = document.getElementById("inputMenu").value;
+        let viewpan = document.getElementById("")
         let qauntity = document.getElementById("inputQuantity").value;
         for(m of menu){
             if(input == m){
@@ -52,7 +71,7 @@
                     let cell1 = newOrder.insertCell(0);     // 컬럼 만들기
                     let cell2 = newOrder.insertCell(1);     // 컬럼 만들기
                     let cell3 = newOrder.insertCell(2);     // 컬럼 만들기
-                    cell1.innerHTML="<input type=\'checkbox\">";
+                    cell1.innerHTML="<input type=\"checkbox\">";    // **따옴표 주의
                     cell2.innerHTML=input;
                     cell3.innerHTML=qauntity+"개"
                 }else{
