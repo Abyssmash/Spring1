@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #abcd {
+        width : 600px;
+    }
+    .swordspan{
+        background-color:aqua;
+    }
+
+    </style>
+<script>
+    function sfun(){
+        var w = document.getElementById("abc").innerHTML;  // 본문을 저장할 변수 선언
+        var sw = document.getElementById("sword").value;   // 검색어를 저장할 변수 선언  
+        
+        
+    }
+</script>
+
+<body>
+    <div id="abcd">
+        <span id="abc">
+            주말 이틀 연속 코로나19 하루 신규 확진자가 10만명대를 
+            기록하는 등 유행 규모가 감소세를 이어갔다. 
+            정부가 방역·의료체계의 일상회복을 
+            목표로 한 ‘포스트 오미크론 대응체계’를 준비하는 가운데 
+            11일부터는 보건소 선별진료소와 임시선별진료소에서 코로나19 신속항원검사가 중단된다.
+        </span>
+        <br>
+        찾을 문자열 <input type="text" id="sword"> 
+        <input type="button" onclick="sfun()" value="검색">
+        </span>
+        </div>   
+        </html>
+
+<!-- 
+과제1 : 검색어가 모두 몇개인지 카운팅하시오
+과제2 : 검색어는 배경을 노락색으로 색칠하세요.
+-->
+
+<!--순서
+1. 검색어를 입력하고 검색을 누르면 입력한 글자가 출력됨
+ 검색어를 입력하고 검색을 누르면 호출
+2. 단어갯수 확인("p")을 누르면 검색어의 단어를 센 수가 "pword"에 출력됨
+ 호출된 함수는 글자를 세어줌
+ 단어 갯수에서 확인을 누르면 출력
+-->
+
