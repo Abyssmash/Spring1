@@ -32,6 +32,19 @@
 </body>
 </html>
 <script>
+    function cal(a){
+        // alert(a)
+        if(a=='='){
+            let ab = document.getElementById('k')
+            let c = ab.innerText
+            ab.innerText = eval(c)
+        }else{
+            let ab = document.getElementById('k')
+            // alert(ab.innerText)
+            ab.innerText += a
+            
+        }
+    }
     // 이벤트 처리를 위한 리스너: 이벤트 리스너, 마우스 리스너 등
     // 지금 사용해 본 것은: click, change
     // 마우스 동작은: mouseup, mousedown
@@ -78,17 +91,4 @@
     }
         */
 
-    // function cal(a){
-    //     // alert(a)
-    //     if(a=='='){
-    //         let ab = document.getElementById('k')
-    //         let c = ab.innerText
-    //         ab.innerText = eval(c)
-    //     }else{
-    //         let ab = document.getElementById('k')
-    //         // alert(ab.innerText)
-    //         ab.innerText = ab.innerText + a
-            
-    //     }
-    // }
 </script>

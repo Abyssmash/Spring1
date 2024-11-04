@@ -17,12 +17,50 @@
     </style>
 <script>
     function sfun(){
-        var w = document.getElementById("abc").innerHTML;  // 본문을 저장할 변수 선언
-        var sw = document.getElementById("sword").value;   // 검색어를 저장할 변수 선언  
+        var w = document.getElementById("abc").innerHTML;  
+        // 본문을 저장할 변수 선언
+        var sw = document.getElementById("sword").value;   
+        // 검색어를 저장할 변수 선언  
+
+        // alert(w);   // 중간 단위 테스트 성격 > 아이디어가 발현 가능성
+        // alert(typeof(w));
+        // alert(sw); 
+        // alert(typeof(sw));
+        // 문자열, sw 문자열이 w에 몇번 있는지 확인하자
+        // 자바 스크립트의 문자열 함수 찾아보기
+        // alert(w.indexOf(sw));
+        // alert(w.indexOf(sw,20));  위치를 지정할 수 있다.
         
-        
+
+        // indexOf : 메서드명, 기능, 리턴값이 무엇인지?
+        //             매개변수의 문자열이 시작되는 위치,
+        //             리턴값은 숫자
+        w=w.replaceAll("<span class = \"aa\">","");
+        w=w.replaceAll("<span>","");
+        alert(w);
+        w=w.replaceAll(sw,"<span class='aa'>"+sw+"</span>");
+        alert(w);
+        document.getElementById("abc").innerHTML=w;
+ 
+/*        
+        var cnt=0;
+        for(let i = 0; i < w.length; i++){
+            var kk = w.indexOf(sw,i);
+            if(kk != -1){
+                cnt++;
+                i=kk;   // kk값이 -1이 아니라면 위치값 다음부터
+                        // 검색하면 되니까 i값을 변경해줌
+            }
+        }
+        */
     }
+        
 </script>
+<style>
+    .aa{
+        background-color: yellow;
+    }
+</style>
 
 <body>
     <div id="abcd">
