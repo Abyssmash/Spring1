@@ -15,7 +15,7 @@
       box-sizing: border-box;
     }
 
-    p,
+    p
     span {
       margin: 0;
     }
@@ -111,7 +111,7 @@
       position: absolute;
     }
 
-    .cart__list__optionbtn {
+    .cart__list__optionbtn {    
       background-color: white;
       font-size: 10px;
       border: lightgrey solid 1px;
@@ -273,8 +273,50 @@
 </body>
 
 <script>
+    document.getElementById("cart__bigorderbtn right").addEventListener('click',()=>{
+        for(let i = 0; i < buyGoods.rows.length; i++){
+            if(cart__list.rows[i].cart__list__option[i]){
+                hidden.addRow(i);
+                i++;
+            }
+        }
+    });
+    document.getElementById("cart__list__optionbtn").addEventListener('click',()=>{
+        // alert("삭제")
+        for(let i = 0; i < buyGoods.rows.length; i++){
+            if(cart__list.rows[i].cells[0].children[0].checked){
+                hidden.deleteRow(i);
+                i--;
+            }
+        }
+    });
 
-  
+  function order(){
+    let cart__list__optionbtn = document.getElementsByClassName("cart__list").value;
+    // let goodsInfo = document.getElementById("goodsInfo").value;
+    // let goodsCnt = document.getElementById("goodsCnt").value;
+    // let goodsPrice = document.getElementById("goodsPrice").value;
+    // let goodsDlv = document.getElementById("goodsDlv").value;
+        for(cart__list__detail of buyGoods){
+            if(cart__list__optionbtn == cart__list__detail){
+                // let k = confirm("주문");
+                // alert(k)
+                let cell1 = cart__list__optionbtn.insertCell(0);
+                let cell2 = goodsInfo.insertCell(1);
+                let cell3 = goodsCnt.insertCell(2);
+                let cell4 = goodsPrice.insertCell(3);
+                let cell5 = goodsDlv.insertCell(4);
+                cell1.innerHTML=cart__list__optionbtn;
+                cell2.innerHTML=goodsInfo;
+                cell3.innerHTML=goodsCnt;
+                cell4.innerHTML=goodsPrice;
+                cell5.innerHTML=goodsDlv;
+            } else{
+                alert("상품 정보를 정확하게 입력해주세요.");
+            }
+            return;
+        }
+    }
 
 </script>
 
