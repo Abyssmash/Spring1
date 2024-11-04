@@ -1,0 +1,14 @@
+웹개발 
+	Client		                Server
+- 웹 브라우저		             아파치 - 웹서버: 정적 데이터(서비스) 처리 
+                                        > 그림 파일, html 문서, css, java script
+컴파일: html, css, js			 톰캣 - WAS: 동적 데이터(서비스) 처리 > 데이터 베이스 정보
+                                > FrameWork - Spring legacy: 컨트롤러,  view template(JSP)
+
+                                *JSP: html로 랜더링
+                                (데이터베이스 자료의 객체인 DTO는 html에서 읽을 수 없다.
+                                html은 객체를 사용하지 않기 때문이다.
+                                JSP는 데이터 베이스의 객체를 html이 인식할 수 있는 형태로
+                                가져오는 언어이다.)
+
+                                *view: 클라이언트에게 응답할 화면
