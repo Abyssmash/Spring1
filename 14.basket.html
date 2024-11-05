@@ -277,6 +277,7 @@
     //addRow() 주문하기 버튼 onclick
     //delRow() 선택상품삭제 버튼 onclick
     //allChk1() 모든 체크박스 클릭 onchange
+
    
   // 주문하기 버튼을 누르면 주문 상품을 추가해주는 기능
   function addRow(){  
@@ -332,6 +333,8 @@
     var total = 0;
 
     // 선택상품 금액 + 총 배송비 = 총 주문금액
+
+    // 코드가 실행되지 않는 이유는 아마도...newOrder로 저장해주었기때문..?
     function price(){
       let allG = document.getElementById("allGoods").value;
       let allD = document.getElementById("allDlv").value;
@@ -340,8 +343,18 @@
       let Pri = document.getElementById("goodsPrice").value;
       let Dlv = document.getElementById("goodsDlv").value;
 
-      
+      if (isAdd) {
+      totalGoods += parseInt(cnt) * parseInt(Pri);
+      totalDlv += parseInt(Dlv);
+    } else {
+      totalGoods -= parseInt(cnt) * parseInt(Pri);
+      totalDlv -= parseInt(Dlv);
     }
+    total = totalGoods + totalDlv;
+    $("#allGoods").html(String(totalGoods) + " 원");
+    $("#allDlv").html(String(totalDlv) + " 원");
+    $("#allPri").html(String(total) + " 원");
+  }
 
 </script>
 
