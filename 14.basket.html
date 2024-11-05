@@ -273,11 +273,13 @@
 </body>
 
 <script>
+  
     //addRow() 주문하기 버튼 onclick
     //delRow() 선택상품삭제 버튼 onclick
     //allChk1() 모든 체크박스 클릭 onchange
-    
-  function addRow(){  // 주문하기 버튼을 누르면 주문 상품을 추가해주는 기능
+   
+  // 주문하기 버튼을 누르면 주문 상품을 추가해주는 기능
+  function addRow(){  
     // 상품 정보
     let goodsInfo = document.getElementById("goodsInfo").value;
     // 상품 주문 수량
@@ -303,7 +305,7 @@
         document.getElementById("hidden").hidden = true;
       }
     }
-
+    // 체크박스 선택 삭제
     function delRow(){  
       for(let i = 0; i < cart__list.rows.length; i++){
           if(cart__list.rows[i].cells[0].children[0].checked){
@@ -312,16 +314,32 @@
         }
       }
     }
+    // 전체 상품 선택
     function allChk1(){
       let selectAll = document.getElementById("allChk").checked;
       for(let i = 0; i < cart__list.rows.length; i++){
         cart__list.rows[i].cells[0].children[0].checked = selectAll;
       } 
     }
+    // 선택상품금액 id : allGoods 
+    // 총 배송비 id : allDlv 
+    // 총 주문금액 id : allPri 
     // 옵션 갯수: goodsCnt *
     // 가격: goodsPrice +
     // 배송비: goodsDlv +
+    var totalGoods = 0;
+    var totalDlv = 0;
+    var total = 0;
+
+    // 선택상품 금액 + 총 배송비 = 총 주문금액
     function price(){
+      let allG = document.getElementById("allGoods").value;
+      let allD = document.getElementById("allDlv").value;
+      let allP = document.getElementById("allPri").value;
+      let cnt = document.getElementById("goodsCnt").value;
+      let Pri = document.getElementById("goodsPrice").value;
+      let Dlv = document.getElementById("goodsDlv").value;
+
       
     }
 
