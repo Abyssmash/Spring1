@@ -1,20 +1,37 @@
-웹개발
+<웹 개발>
 
 -http
 -TCP, Port
--IP
+-IP <--> DNS (domain name server)
 
+프로토콜://서버주소:Port/context path/request
+
+= domain을 request하면 server를 response한다. 
+* context path는 생략 가능하다.
+
+서비스 - DAO (공통 모듈)
+: 레이어를 나눠놓음 = 각자의 역할 분담이 있음 
+* 탐구해보기: DB에서 commit과 롤백 = 트랜젝션
 
 Client      >request       Server
-          url: http://    web server : 정적 컨텐츠(서비스)  ex) 첨부파일, 정적문서(ex:html)
-                          WAS : 동적 컨텐츠(서비스) 
-                                > url을 보고 판단(context path) 
+          url: http://         web server : 정적 컨텐츠(서비스)  ex) 첨부파일, 정적문서(ex:html)
+          method            WAS : 동적 컨텐츠(서비스) 
+          parameter         > url을 보고 판단(context path) 
                                 (ex: sts- servers: WAS / www: 스프링 프로젝트)
                                 > 서비스 연결: 주소만 보겠다 (주소에 따른 서비스 연결)
                                 (클라이언트의 요청을 받고 판단) 
                                 ex) http://cafe > 'cafe'의 기능을 제공하는 스프링 프로젝트를 연결
                                 > database작업이 필요한 경우
 
+URL: 프로토콜 요청
+method: parameter를 어떤 방법으로 보내줄 것인가 (두 가지 방식: get, post)
+	- get: 변수와 값이 노출됨. (누구나 볼 필요가 있는 곳에 사용 ex) 검색창, 도메인 주소 )
+	         CRUD 중 R과 흡사한 의미
+	- post: 변수와 값을 문서(html)에 숨겨서 보여준다. (은닉화 해야할 곳에 사용 ex) 개인정보 )
+	         CRUD 중 C와 흡사한 의미
+	* REST API: 메소드에 CRUD의 의미를 담아준다.
+
+parameter : 서버에게 전송할 데이터(값), 요청할때 무언가를 줘야함. 
 
 Spring regacy                    Spring boot
 /정부/                          /사기업/
@@ -23,18 +40,35 @@ WAS를 내장하고 있지 않음         WAS를 내장하고 있음
 
 1. request Mapping
 : 요청 분석
-DB 필요 > 서비스 >
-DAO(주요 객체에 따른 CRUD 작업
-- 
-mybatis 사용)
+(DB 필요) > 
+2. 서비스 >
+3. DAO(주요 객체에 따른 CRUD 작업
+- mybatis 사용)
 
+Java > html 문서 > 읽을 수 있게끔 변환 (view template: JSP) 
 
-
-
-DAO(주요 객체 공부)
+* DAO(주요 객체 공부)
 : mybatis, jpa 찾아보기
 
 @RequestMapping(value = "/", method = RequestMethod.GET)
 	/* 클라이언트가 요청한게 루트라는 뜻 : com 다음의 /가 클라이언트가 요청한 내용임 */
   ex: http://localhost:8080/hom/WEB-INF/classes/www/silver/hom/HomeController.java
-  >   http / IP주소 / port 번호 / hom: context path / request mapping: 요청한 서비스 
+  >   http / IP주소 / port 번호 / hom: context path / request mapping: 요청한 서비스 = value
+
+server ip: 서버를 찾아가는 것
+port: 어떤 서비스를 이용할 것이냐
+context path: 어떤 서비스이냐
+
+ping: 서버가 죽어있는지 살아있는지 확인
+	TTL이 있으면 살아있는 것, 안뜨면 죽어있는 것
+
+ex) TTL=113  
+TTL(운영체제)가 100이 넘어가면 속도가 느리다는 뜻
+
+www.google.com [142.250.197.196]
+실제 인터넷 주소 (도메인) / IP 주소
+* 도메인은 사야한다. 도메인을 관리하는 곳이 따로 있음.
+
+정의(나중에 프로젝트 첨부 표 만들때)
+	서비스 / parameter	 / method / 서비스 dao / view 이름
+     ex)  add / text or binary(첨부파일)/ get, post 등 / insert / home
