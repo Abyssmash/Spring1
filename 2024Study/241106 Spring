@@ -1,0 +1,40 @@
+웹개발
+
+-http
+-TCP, Port
+-IP
+
+
+Client      >request       Server
+          url: http://    web server : 정적 컨텐츠(서비스)  ex) 첨부파일, 정적문서(ex:html)
+                          WAS : 동적 컨텐츠(서비스) 
+                                > url을 보고 판단(context path) 
+                                (ex: sts- servers: WAS / www: 스프링 프로젝트)
+                                > 서비스 연결: 주소만 보겠다 (주소에 따른 서비스 연결)
+                                (클라이언트의 요청을 받고 판단) 
+                                ex) http://cafe > 'cafe'의 기능을 제공하는 스프링 프로젝트를 연결
+                                > database작업이 필요한 경우
+
+
+Spring regacy                    Spring boot
+/정부/                          /사기업/
+WAS를 내장하고 있지 않음         WAS를 내장하고 있음
+(tomcat을 내부에서 설치)
+
+1. request Mapping
+: 요청 분석
+DB 필요 > 서비스 >
+DAO(주요 객체에 따른 CRUD 작업
+- 
+mybatis 사용)
+
+
+
+
+DAO(주요 객체 공부)
+: mybatis, jpa 찾아보기
+
+@RequestMapping(value = "/", method = RequestMethod.GET)
+	/* 클라이언트가 요청한게 루트라는 뜻 : com 다음의 /가 클라이언트가 요청한 내용임 */
+  ex: http://localhost:8080/hom/WEB-INF/classes/www/silver/hom/HomeController.java
+  >   http / IP주소 / port 번호 / hom: context path / request mapping: 요청한 서비스 
