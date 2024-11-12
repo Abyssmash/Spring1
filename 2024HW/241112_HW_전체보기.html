@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체보기</title>
+</head>
+<style>
+    body{
+        width:1280px;
+        height: 1080px;
+        /* border: 1px solid; */
+        margin: 0px;
+        background-color: rgb(214, 223, 255);
+    }
+    header{
+        display: inline-block;
+        width: 1280px;
+        height: 100px;
+        background-color: rgb(251, 255, 190);
+        text-align: center;
+        box-sizing: border-box;
+        float: left;
+    }
+    nav{
+        width: 1280px;
+        height: 50px;
+        background-color: rgb(15, 111, 255);
+        float: left;
+        /* border: 1px solid; */
+        display: inline-block;
+        padding-left: 10px;
+        box-sizing: border-box;     
+    }
+    .header_title{
+        width: 1000px;
+        height: 50px;
+        /* border: 1px solid; */
+        margin: 0px auto;
+        text-align: center;
+    }
+    .header_title h2{
+        display: inline;
+    }
+    nav ul li{
+        display: inline-block;
+        width: 100px;
+        /* border: 1px solid; */
+        text-align: center;
+        background-color: rgb(226, 255, 121);
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+    section {
+        text-align: center;
+    }
+</style>
+<body>
+    <header>
+        <div class="header_title">
+            <h2>Hello Stranger!</h2>
+            <div class="header_title">
+                <h3>I love dachshud.</h3>
+        </div>
+    </header>
+    <nav>
+        <div id="nav">
+            <ul>
+                <li>Home</li>
+                <li>맛집 기행</li>
+                <li>요리 레시피</li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="bo">게시판</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="all">전체보기</a>
+                </li>
+            </ul>
+        </nav>
+    <section>
+        <div id="notice-title"><h3>게시판</h3></div>
+        <div id="notice">
+            <table class="table">
+                <tr>
+                    <th scope="col" width=20%>글</th>
+                    <th scope="col" width=40%>제목</th>
+                    <th scope="col" width=20%>날짜</th>
+                    <th scope="col" width=20%>수정/삭제</th>
+                </tr>
+
+            </table>
+        </div>
+    </section>
+</body>
+</html>

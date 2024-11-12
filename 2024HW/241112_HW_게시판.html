@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+</head>
+<style>
+    body{
+        width:1280px;
+        height: 1080px;
+        /* border: 1px solid; */
+        margin: 0px;
+        background-color: rgb(214, 223, 255);
+    }
+    header{
+        display: inline-block;
+        width: 1280px;
+        height: 100px;
+        background-color: rgb(251, 255, 190);
+        text-align: center;
+        box-sizing: border-box;
+        float: left;
+    }
+    nav{
+        width: 1280px;
+        height: 50px;
+        background-color: rgb(15, 111, 255);
+        float: left;
+        /* border: 1px solid; */
+        display: inline-block;
+        padding-left: 10px;
+        box-sizing: border-box;     
+    }
+    section{
+        width: 1280px;
+        height: 970px;
+        background-color: rgb(163, 255, 140);
+    }
+    .header_title{
+        width: 1000px;
+        height: 50px;
+        /* border: 1px solid; */
+        margin: 0px auto;
+        text-align: center;
+    }
+    .header_title h2{
+        display: inline;
+    }
+    nav ul li{
+        display: inline-block;
+        width: 100px;
+        /* border: 1px solid; */
+        text-align: center;
+        background-color: rgb(226, 255, 121);
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+    .write{
+        text-align: center;
+    }
+</style>
+<body>
+    <header>
+        <div class="header_title">
+            <h2>Hello Stranger!</h2>
+            <div class="header_title">
+                <h3>I love dachshud.</h3>
+        </div>
+    </header>
+    <nav>
+        <div id="nav">
+            <ul>
+                <li>Home</li>
+                <li>맛집 기행</li>
+                <li>요리 레시피</li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="bo">게시판</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="all">전체보기</a>
+                </li>
+            </ul>
+        </nav>
+    <section>
+        <div class="write">
+            <div class="write-title"><h2>게시판</h2></div>
+                <form class="row g-3" action="write" method="post">
+                    <div class="col-md-4">
+                        <label for="inputState" class="form-label">목록 선택</label>
+                        <select id="inputState" class="form-select" name="list">
+                            <option selected>맛집기행</option>
+                            <option>요리 레시피</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inputCity" class="form-label">작성자</label>
+                        <input type="text" class="form-control" id="inputCity" name="id">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">제목</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="제목" name="ob">
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="글을 작성하세요." id="floatingT"
+                        style="width: 500px; height: 300px;"  name="command"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">저장하기</button>
+                    </div>
+                </form>
+        </div>
+    </section>
+</body>
+</html>
