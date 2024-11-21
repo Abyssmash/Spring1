@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width:1280px;
+        height: 1080px;
+        background-color: rgb(160, 207, 248);
+    }
+    #header_1{
+        width: 1250px;
+        height: 125px;
+        background-color: rgb(193, 248, 255);
+        display: inline-block;
+        margin: 10px;
+    }
+    .company_logo{
+        width: 500px;
+        height: 50px;
+        background-color: rgb(65, 163, 255);
+        margin: auto;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    .login_user{
+        width: 200px;
+        height: 30px;
+        border: 1px solid;
+        display: inline-block;
+        text-align: center;
+        margin-left: 1000px;
+        background-color: aliceblue;
+    }
+    .login_user h4{
+        display: inline-block;
+        margin-top: 5px;
+    }
+    #nav{
+        width: 1250px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: beige;
+        text-align: center;
+        margin-left: 10px;
+    }
+    .nav_menu{
+        display:flex;
+        width: 1227px;
+        height: 30px;
+        background-color: rgb(131, 160, 255);
+        padding:8px 12px;
+        align-items: center;
+    }
+    .navbar_menu{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+        color: azure;
+    }
+    .navbar_menu li{
+        padding: 8px 95px;
+    }
+    section{
+        width: 1250px;
+        height: 800px;
+        background-color: aliceblue;
+        text-align: center;
+        border-radius: 10px;
+        margin-left: 10px;
+        display: inline-block;
+        margin-top: 20px;
+    }
+    .task_main_title{
+        width: 800px;
+        height: 40px;         
+        background-color:rgb(186, 255, 121);
+        display: inline-block;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+    .task_main_title h3{
+        color: rgb(47, 95, 51);
+        text-align: center;
+        margin-top: 8px;
+    }
+    .progress_task{
+        width: 550px;
+        height: 600px;
+        background-color: rgb(202, 255, 197);
+        display: inline-block;
+        margin-top: 30px;
+        margin-left: 50px;
+        border-radius: 10px;
+    }
+    .progress_task h3{
+        width: 50px;
+        height: 30px;
+        color: rgb(0, 39, 0);
+        text-align: center;
+        margin-left: 220px;
+    }
+    .complete_task{
+        width: 550px;
+        height: 600px;
+        background-color: rgb(202, 255, 197);
+        display: inline-block;
+        margin-top: 30px;
+        margin-left: 50px;
+        border-radius: 10px;
+    }
+    .complete_task h3{
+        width: 30px;
+        height: 30px;
+        color: rgb(0, 39, 0);
+        text-align: center;
+        margin-left: 220px;
+    }
+    .task_list{
+        display: flex;
+    }
+    .task_frame{
+        width: 520px;
+        height: 250px;
+        display: inline-block;
+        background-color:#4c927b;
+        border-radius: 10px;
+    }
+    .task_receive{
+        width: 480px;
+        height: 170px;
+        background-color: aliceblue;
+        display: inline-block;
+        text-align: center;
+        margin-top: 20px;;
+    }
+    .task_buttons{
+        margin-top: 15px;
+        margin-left: 370px;
+        display: inline-block;
+    }
+    .end_frame{
+        width: 520px;
+        height: 250px;
+        display: inline-block;
+        background-color:#4c927b;;
+        border-radius: 10px;
+    }
+    .task_end{
+        width: 480px;
+        height: 170px;
+        background-color: aliceblue;
+        display: inline-block;
+        text-align: center;
+        margin-top: 20px;;
+    }
+    .box1{
+        height: 115px;
+        border: 1px solid;
+        text-align: center;
+    }
+    .box2{
+        height: 52px;
+        border: 1px solid;
+        text-align: center;
+    }
+    .box3{
+        height: 115px;
+        border: 1px solid;
+        text-align: center;
+        color: gray;
+    }
+    .box4{
+        height: 52px;
+        border: 1px solid;
+        text-align: center;
+        color: gray;
+    }
+    footer{
+        width: 1250px;
+        height: 80px;
+        display: inline-block;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .company_info{
+        color: rgb(88, 88, 88);
+    }
+</style>
+<body>
+    <div id="header_1">
+        <div class="company_logo">
+            <h2>회사 로고</h2>
+        </div>
+        <div class="login_user">
+            <h4>개발 분석팀 이명화님</h4>
+        </div>
+    </div>   
+    <div id="nav">
+        <nav class="nav_menu">
+            <ul class="navbar_menu">
+                <li><a class="nav-link active" a href="#">Main</a></li>
+                <li><a class="nav-link active" a href="#">게시판</a></li>
+                <li><a class="nav-link active" a href="#">공지사항</a></li>
+                <li><a class="nav-link active" a href="#">개인업무</a></li>
+                <li><a class="nav-link active" a href="#">근태관리</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section>
+        <div class="task_main_title">
+            <h3>personal work management system</h3>
+        </div>
+        <div class="task_list">
+            <div class="progress_task">
+                <div style="height: 600px; overflow-y:scroll">
+                <h3>Progress</h3>
+                <div class="task_frame">
+                    <div class="task_receive">
+                        <div class="box1">
+                            <h4>수원시 거주지 및 상권 분석 요청</h4>
+                        </div>
+                        <div class="box2">
+                            <h5>빅데이터 분석팀 팀장 나봉숙</h5>
+                        </div>                                                                                      
+                    </div>
+                    <div class="task_buttons">
+                        <button class="task_check_button" type="button">확인</button>  
+                        <button class="task_complete_button" type="button">완료</button>
+                    </div>
+                </div>     
+            </div>
+        </div>
+            <div class="complete_task">
+                <div style="height: 600px; overflow-y:scroll">
+                <h3>Complete</h3>
+                <div class="end_frame">
+                    <div class="task_end">
+                        <div class="box3">
+                            <h4>프로그램 프레임 수정 요청</h4>
+                        </div>
+                        <div class="box4">
+                            <h5>개발 팀장 곰뚜리</h5>
+                        </div>                                                                                      
+                    </div>
+                    <div class="task_buttons">
+                        <button class="task_check_button" type="button">확인</button>  
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    </section>
+    <footer>
+        <div class="company_info">
+            <p style="font-size:12px">서울특별시 00구 00로 000</p>
+            <p style="font-size:12px">사업자등록번호: 000-00-00000</p>
+            <p style="font-size:12px">대표이사: 이개발</p>
+        </div>
+    </footer>   
+</body>
+</html>
