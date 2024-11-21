@@ -5,7 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+     body{
+        width:1280px;
+        height: 1080px;
+        background-color: rgb(160, 207, 248);
+    }
+    #header_1{
+        width: 1250px;
+        height: 125px;
+        background-color: rgb(193, 248, 255);
+        display: inline-block;
+        margin: 10px;
+    }
+    .company_logo{
+        width: 500px;
+        height: 50px;
+        background-color: rgb(65, 163, 255);
+        margin: auto;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    .login_user{
+        width: 200px;
+        height: 30px;
+        border: 1px solid;
+        display: inline-block;
+        text-align: center;
+        margin-left: 1000px;
+        background-color: aliceblue;
+    }
+    .login_user h4{
+        display: inline-block;
+        margin-top: 5px;
+    }
+    #nav{
+        width: 1250px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: beige;
+        text-align: center;
+        margin-left: 10px;
+    }
+    .nav_menu{
+        display:flex;
+        width: 1227px;
+        height: 30px;
+        background-color: rgb(131, 160, 255);
+        padding:8px 12px;
+        align-items: center;
+    }
+    .navbar_menu{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+        color: azure;
+    }
+    .navbar_menu li{
+        padding: 8px 95px;
+    }
+    section{
+        width: 1250px;
+        height: 800px;
+        background-color: aliceblue;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+</style>
 <body>
-    
+    <div id="header_1">
+        <div class="company_logo">
+            <h2>회사 로고</h2>
+        </div>
+        <div class="login_user">
+            <h4>개발 분석팀 이명화님</h4>
+        </div>
+    </div>   
+    <div id="nav">
+        <nav class="nav_menu">
+            <ul class="navbar_menu">
+                <li><a class="nav-link active" a href="#">Main</a></li>
+                <li><a class="nav-link active" a href="#">게시판</a></li>
+                <li><a class="nav-link active" a href="#">공지사항</a></li>
+                <li><a class="nav-link active" a href="#">개인업무</a></li>
+                <li><a class="nav-link active" a href="#">근태관리</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section>
+
+    </section>
 </body>
 </html>
