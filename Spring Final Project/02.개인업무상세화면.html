@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <style>
-     body{
+    body{
         width:1280px;
         height: 1080px;
         background-color: rgb(160, 207, 248);
@@ -74,6 +74,75 @@
         background-color: aliceblue;
         margin-left: 10px;
         margin-top: 20px;
+        display: inline-block;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .container{
+        width: 1000px;
+        height: 600px;
+        background-color: rgb(185, 248, 185);
+        display: inline-block;
+        margin-top: 50px;
+    }
+    .task_detail_title{
+        width: 800px;
+        height: 60px;
+        background-color: aliceblue;
+        display: inline-block;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .select_emp{
+        width: 800px;
+        height: 30px;
+        display: flex;
+        margin-top: 10px;
+        text-align: center;
+        margin-left: 150px;
+        align-items: center;
+    }
+    .select_emp p{
+        margin-left: 20px;
+    }
+    .file_name{
+        width: 90px;
+        height: 30px;
+        display: inline-block;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .receive_file{
+        width: 700px;
+        height: 50px;
+        background-color: aliceblue;
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .task_receive_comment{
+        width: 800px;
+        height: 350px;
+        background-color: aliceblue;
+        display: inline-block;
+        align-items: center;
+    }
+    footer{
+        width: 1250px;
+        height: 80px;
+        display: inline-block;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .company_info{
+        color: rgb(88, 88, 88);
+    }
+    .back_button{
+        width: 300px;
+        height: 100px;
+        margin-left: 920px;
+        margin-top: 20px;
     }
 </style>
 <body>
@@ -97,7 +166,43 @@
         </nav>
     </div>
     <section>
-
+        <div class="container">
+            <div class="task_detail_title">
+                <h3>title</h3>
+            </div>
+            <div class="select_emp">
+                <p>부서: <input type="text" size=10px name="receive_dept" value="" ></p>
+                <!--인턴, 사원, 대리, 과장, 팀장, 임원-->
+                <p>직급: <input type="text" size=10px name="receive_rank" value=""></p>
+                <p>성명: <input type="text" size=10px name="receive_emp" value=""></p>
+                <p>기간: <input type="text" size=10px name="receive_peroid" value=""></p>
+            </div>
+            <div class="file_name">
+                <h4>첨부파일</h4>
+            </div>
+            <div class="receive_file">
+                <div style="height: 50px; overflow-y:scroll">
+                    <p>받은 파일</p>
+                </div>
+            </div>
+            <div class="task_receive_comment">
+                <div style="height: 350px; overflow-y:scroll">
+                    <p>받은 업무 내용</p>
+                </div>
+            </div>
+        </div>
+        <div class="back_button">
+            <button type="button">
+                <img src="img/back.png" width="40" height="40" onclick="">
+            </button>
+        </div>
     </section>
+    <footer>
+        <div class="company_info">
+            <p style="font-size:12px">서울특별시 00구 00로 000</p>
+            <p style="font-size:12px">사업자등록번호: 000-00-00000</p>
+            <p style="font-size:12px">대표이사: 이개발</p>
+        </div>
+    </footer>  
 </body>
 </html>

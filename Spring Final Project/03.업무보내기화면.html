@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+        width:1280px;
+        height: 1080px;
+        background-color: rgb(160, 207, 248);
+    }
+    #header_1{
+        width: 1250px;
+        height: 125px;
+        background-color: rgb(193, 248, 255);
+        display: inline-block;
+        margin: 10px;
+    }
+    .company_logo{
+        width: 500px;
+        height: 50px;
+        background-color: rgb(65, 163, 255);
+        margin: auto;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    .login_user{
+        width: 200px;
+        height: 30px;
+        border: 1px solid;
+        display: inline-block;
+        text-align: center;
+        margin-left: 1000px;
+        background-color: aliceblue;
+    }
+    .login_user h4{
+        display: inline-block;
+        margin-top: 5px;
+    }
+    #nav{
+        width: 1250px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: beige;
+        text-align: center;
+        margin-left: 10px;
+    }
+    .nav_menu{
+        display:flex;
+        width: 1227px;
+        height: 30px;
+        background-color: rgb(131, 160, 255);
+        padding:8px 12px;
+        align-items: center;
+    }
+    .navbar_menu{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+        color: azure;
+    }
+    .navbar_menu li{
+        padding: 8px 95px;
+    }
+    section{
+        width: 1250px;
+        height: 800px;
+        background-color: aliceblue;
+        margin-left: 10px;
+        margin-top: 20px;
+        display: inline-block;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .container{
+        width: 1000px;
+        height: 600px;
+        background-color: rgb(185, 248, 185);
+        display: inline-block;
+        margin-top: 50px;
+    }
+    .task_detail_title{
+        width: 800px;
+        height: 60px;
+        display: inline-block;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .task_detail_title input{
+        font-size: 30px;
+    }
+    .select_emp{
+        width: 850px;
+        height: 40px;
+        display: flex;
+        margin-left: 40px;
+        text-align: center;
+        margin-left: 100px;
+        align-items: center;
+    }
+    .select_emp select{
+        margin-left: 20px;
+    }
+    .select_emp p{
+        margin-left: 20px; 
+    }
+    .select_emp input{
+        margin-left: 20px;
+    }
+    .send_file{
+        width: 800px;
+        height: 50px;
+        background-color: aliceblue;
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .task_send_comment{
+        width: 800px;
+        height: 350px;
+        background-color: aliceblue;
+        display: inline-block;
+        align-items: center;
+    }
+    footer{
+        width: 1250px;
+        height: 80px;
+        display: inline-block;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .company_info{
+        color: rgb(88, 88, 88);
+    }
+    .send_button{
+        width: 300px;
+        height: 50px;
+        display: inline-block;
+        margin-top: 20px;
+    }
+</style>
+<body>
+<div id="header_1">
+    <div class="company_logo">
+        <h2>회사 로고</h2>
+    </div>
+    <div class="login_user">
+        <h4>개발 분석팀 이명화님</h4>
+    </div>
+</div>   
+<div id="nav">
+    <nav class="nav_menu">
+        <ul class="navbar_menu">
+            <li><a class="nav-link active" a href="#">Main</a></li>
+            <li><a class="nav-link active" a href="#">게시판</a></li>
+            <li><a class="nav-link active" a href="#">공지사항</a></li>
+            <li><a class="nav-link active" a href="#">개인업무</a></li>
+            <li><a class="nav-link active" a href="#">근태관리</a></li>
+        </ul>
+    </nav>
+</div>
+<section>
+    <div class="container">
+        <div class="task_detail_title">
+            <input type="text" size=45px name="receive_rank" value="title">
+        </div>
+        <div class="select_emp">
+            <select name="department_type">
+                <option value="none">부서 선택</option>
+                <option value="type_sales">영업팀</option>
+                <option value="type_develop">개발팀</option>
+                <option value="type_technic">기술팀</option>
+                <option value="type_plan">기획팀</option>
+                <option value="type_account">회계팀</option>
+                <option value="type_HR">인사팀</option>
+            </select>  
+            <!--인턴, 사원, 대리, 과장, 팀장, 임원-->
+            <select name="rank_type">
+                <option value="none">직급 선택</option>
+                <option value="type_intern">인턴</option>
+                <option value="type_staff">사원</option>
+                <option value="type_assiatant_manager">대리</option>
+                <option value="type_manager">과장</option>
+                <option value="type_team_manager">팀장</option>
+                <optoin value="type_executive">임원</optoin>
+            </select>
+            <p>성명: <input type="text" name="name_emp" value=""></p>
+            <select name="task_peroid">
+                <option value="none">기간 선택</option>
+                <option value="peroid1">1일</option>
+                <option value="peroid2">2일</option>
+                <option value="peroid3">3일</option>
+                <option value="peroid4">5일</option>
+                <option value="peroid5">7일</option>
+                <option value="peroid6">2주</option>
+                <option value="peroid7">1달</option>
+            </select>
+            <input type="file" accept=""> 
+        </div>
+        <div class="send_file">
+            <div style="height: 50px; overflow-y:scroll">
+                <p>선택한 파일 목록 (최대 3개)</p>
+            </div>
+        </div>
+        <div class="task_send_comment">
+            <div style="height: 350px; overflow-y:scroll">
+                <textarea cols="108" rows="100">업무 보고 내용</textarea>
+            </div>
+        </div>
+    </div>
+        <div class="send_button">
+            <button type="button" onclick="">보내기</button>
+        </div>
+</section>
+<footer>
+    <div class="company_info">
+        <p style="font-size:12px">서울특별시 00구 00로 000</p>
+        <p style="font-size:12px">사업자등록번호: 000-00-00000</p>
+        <p style="font-size:12px">대표이사: 이개발</p>
+    </div>
+</footer>  
+<!--<input type="submit"> 제출-->
+</html>
