@@ -6,25 +6,26 @@
     <title>Document</title>
 </head>
 <script>
-    const tasklist = document.getElementById("task_list");
-    const bintasklist = document.getElementById("task_bin_frame");
 
-    window.onload = () => {
-        if (tasklist.rows.length <= 0) {
-            tasklist.style.display = "";
-        } else {
-            tastk_bin_frame.style.display = "none";
-        }
-    }
-
-    // 받은 업무의 답신을 보낸 뒤 완료된 tasklist에 들어가게 하기 =  API가 필요할 것 같음
 
 </script>
 <style>
     body{
-        width:1280px;
-        height: 1080px;
-        background-color: rgb(160, 207, 248);
+      /* 해상도 : 1280x1024 */
+    /* width: 1280px;
+    height: 1024px; */
+    
+    /* 해상도 : 1152x864 */
+    width: 1152px;
+    height: 864px;
+
+    /* 해상도 : 1024x768 */
+    /* width: 1024px;
+    height: 768px; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
     #header_1{
         width: 1250px;
@@ -33,65 +34,127 @@
         display: inline-block;
         margin: 10px;
     }
-    .company_logo{
-        width: 500px;
-        height: 50px;
-        background-color: rgb(65, 163, 255);
-        margin: auto;
-        padding-bottom: 10px;
-        text-align: center;
+    .main {
+    width: 100%;
+    height: 90%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
     }
-    .login_user{
-        width: 200px;
-        height: 30px;
-        border: 1px solid;
-        display: inline-block;
-        text-align: center;
-        margin-left: 1000px;
-        background-color: aliceblue;
+    header {
+        width: 98%;
+        height: 13%;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        padding: 10px;
+
+        display: flex;
     }
-    .login_user h4{
-        display: inline-block;
-        margin-top: 5px;
-    }
-    #nav{
-        width: 1250px;
-        height: 40px;
-        border-radius: 10px;
-        background-color: beige;
-        text-align: center;
-        margin-left: 10px;
-    }
-    .nav_menu{
-        display:flex;
-        width: 1227px;
-        height: 30px;
-        background-color: rgb(131, 160, 255);
-        padding:8px 12px;
+    .header_left {
+        width: 50%;
+        padding-left: 15px;
+        
+        display: flex;
+        justify-content: flex-start;
         align-items: center;
     }
-    .navbar_menu{
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
+    .header_left * {
+        margin-right: 10px;
     }
-    a{
+    .header_left a {
+        color: black;
         text-decoration: none;
-        color: azure;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
-    .navbar_menu li{
-        padding: 8px 95px;
+    .logo_img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
     }
-    section{
-        width: 1250px;
-        height: 800px;
-        background-color: aliceblue;
-        text-align: center;
-        border-radius: 10px;
+    .logo_text {
+        font-size: 25px;
+    }
+    .header_right {
+        width: 50%;
+        padding-right: 15px;
+        
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .header_right * {
         margin-left: 10px;
+    }
+    .login_user {
+        font-size: 25px;
+    }
+    .logout_btn {
+        background-color: white;
+        font-size: 18px;
+        font-weight: bold;
+        width: 100px;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 15px;
+
+        cursor: pointer;
+    }
+    .logout_btn:hover {
+        background-color: skyblue;
+    }
+    .header_left span, .header_right span {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    nav {
+        width: 98%;
+        height: 8%;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        padding: 10px;
+
+        display: flex;
+        align-items: center;
+    }
+    nav ul {
+        padding-left: 20px;
+    }
+    nav ul li {
+        /* background-color: silver; */
+        font-weight: bold;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-right: 25px;
+        padding: 10px;
+
         display: inline-block;
-        margin-top: 20px;
+        cursor: pointer;
+    }
+    nav ul li:hover {
+        background-color: skyblue;
+    }
+    nav ul li a {
+        color: black;
+        text-decoration: none;
+    }
+    nav ul li a span {
+        font-size: 20px;
+    }
+    section {
+        width: 98%;
+        height: 67%;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .send_task_button{
         width: 100px;
@@ -156,14 +219,6 @@
         display: inline-block;
         background-color:#4c927b;
         border-radius: 10px;
-    }
-    .task_bin_frame{
-        width: 520px;
-        height: 250px;
-        display: inline-block;
-        background-color:#4c927b;
-        border-radius: 10px;
-        margin-top: 10px;
     }
     .task_receive{
         width: 480px;
@@ -232,22 +287,31 @@
     }
 </style>
 <body>
-    <div id="header_1">
-        <div class="company_logo">
-            <h2>회사 로고</h2>
-        </div>
-        <div class="login_user">
-            <h4>개발 분석팀 이명화님</h4>
-        </div>
-    </div>   
-    <div id="nav">
-        <nav class="nav_menu">
-            <ul class="navbar_menu">
-                <li><a class="nav-link active" a href="#">Main</a></li>
-                <li><a class="nav-link active" a href="#">게시판</a></li>
-                <li><a class="nav-link active" a href="#">공지사항</a></li>
-                <li><a class="nav-link active" a href="#">개인업무</a></li>
-                <li><a class="nav-link active" a href="#">근태관리</a></li>
+    <div class="main">
+        <header>
+            <div class="header_left">
+                <a href="emp_main">
+                    <img src="/img/logo.png" alt="Logo" class="logo_img">
+                    <div>
+                        <span class="logo_text">○○○ Company</span>
+                    </div>
+                </a>
+            </div>
+            <div class="header_right">
+                <div>
+                    <span class="login_user">○○○ 님</span>
+                </div>
+                <form action="" method="">
+                    <input type="button" value="로그아웃" class="logout_btn">
+                </form>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="email"><span>이메일</span></a></li>
+                <li><a href=""><span>게시판</span></a></li>
+                <li><a href=""><span>근태관리</span></a></li>
+                <li><a href=""><span>개인업무</span></a></li>
             </ul>
         </nav>
     </div>
@@ -262,7 +326,6 @@
             <div class="progress_task">
                 <div style="height: 600px; overflow-y:scroll">
                 <h3>Progress</h3>
-                <form>
                 <div class="task_frame">
                     <div class="task_receive">
                         <div class="box1">
@@ -270,23 +333,6 @@
                         </div>
                         <div class="box2">
                             <h5>빅데이터 분석팀 팀장 나봉숙</h5>
-                        </div>                                                                                      
-                    </div>
-                </form>
-                    <div class="task_buttons">
-                        <a href="./02.개인업무상세화면.html">
-                        <button class="task_check_button" type="button">확인</button></a>  
-                        <a href="./03.업무보내기화면.html">
-                        <button class="task_send_button" type="button">보내기</button></a>
-                    </div>
-                </div>
-                <div class="task_bin_frame">
-                    <div class="task_receive">
-                        <div class="box1">
-                            <h4>비어 있는 제목</h4>
-                        </div>
-                        <div class="box2">
-                            <h5>보낸 직원</h5>
                         </div>                                                                                      
                     </div>
                     <div class="task_buttons">

@@ -7,37 +7,34 @@
 </head>
 <script>
     const taskmail = document.getElementById("container");
-    const newtaskfile = document.getElementById("send_file");
+    const send_button = document.getElementById("send_button");
 
-        function sendtask(){
-            if($("task_detail_title").val()==""){
+        function sendtaskmail(){
+            if($("#task_detail_title").val()==""){
                 alert("업무명을 입력하세요.");
                 return;
             }
-            if($("department_type").val()== "none"){
+            if($("#department_type").val()== "none"){
                 alert("부서를 선택하세요.")
                 return;
             }
-            if($("rank_type").val()=="none"){
+            if($("#rank_type").val()=="none"){
                 alert("직급을 선택하세요.")
                 return;
             }
-            if($("name_emp").val()==""){
+            if($("#name_emp").val()==""){
                 alert("이름을 입력하세요.")
                 return;
             }
-            if($("task_peroid").val()=="none"){
+            if($("#task_peroid").val()=="none"){
                 alert("기간을 선택하세요.")
                 return;
             }
-            if($("task_send_comment").val==""){
+            if($("#task_send_comment").val==""){
                 alert("업무 내용을 입력하세요.")
                 return;
             }
         }
-        let newtask = newtaskfile.insertRow(newtaskfile.rows.length);
-        let cell1 = newtask.insertCell().innerHTML =
-        if(send_file.rows)
         
 </script>
 <style>
@@ -202,10 +199,10 @@ body{
     </nav>
 </div>
 <section>
+    <form>
     <div class="container">
-        <form action="#" method="get">
         <div class="task_detail_title">
-            <input type="text" size=45px name="receive_rank" value="title">
+            <input type="text" size=45px name="receive_rank" value="">
         </div>
         <div class="select_emp">
             <select name="department_type">
@@ -252,8 +249,8 @@ body{
         </div>
     </div>
         <div class="send_button">
-            <!--<a href="./01.개인업무화면.html">-->
-            <button type="submit" onclick="">보내기</button>
+            <a href="./01.개인업무화면.html">
+            <button type="submit" onclick="sendtaskmail()">보내기</button></a>
         </div>
     </form>
 </section>
