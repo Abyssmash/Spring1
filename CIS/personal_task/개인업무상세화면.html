@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CIS/base css/base.css">
+    <link rel="stylesheet" href="/CIS/css/mail_detail.css">
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="header_left">
+                <a href="emp_main">
+                    <img src="/image/logo.png" alt="Logo" class="logo_img">
+                    <div>
+                        <span class="logo_text">○○○ Company</span>
+                    </div>
+                </a>
+            </div>
+            <div class="header_right">
+                <div>
+                    <span class="login_user">○○○ 님</span>
+                </div>
+                <form action="" method="">
+                    <input type="button" value="로그아웃" class="logout_btn">
+                </form>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="email"><span>이메일</span></a></li>
+                <li><a href=""><span>게시판</span></a></li>
+                <li><a href=""><span>근태관리</span></a></li>
+                <li><a href=""><span>개인업무</span></a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="mail_container">
+                <form action="mail_insert"  method="post">
+                    <div class="mail_content_top">
+                        <div class="mail_title">
+                            <span>제목</span>
+                            <input type="text" placeholder="제목">
+                        </div>
+                        <div class="select_department">
+                            <span>부서</span>
+                            <input type="text" placeholder="부서">
+                        </div>
+                            <!--인턴, 사원, 대리, 과장, 팀장, 임원-->
+                        <div class="select_rank">
+                            <span>직급</span>
+                            <input type="text" placeholder="직급">
+                        </div>
+                        <div class="select_peroid">
+                            <span>기간</span>
+                            <input type="text" placeholder="기간">
+                        </div>
+                        </div>
+                        <div class="mail_recipient">
+                            <span>받는 사람</span>
+                            <input type="text" placeholder="받는 사람">
+                        </div>
+                    </div>
+                    <div class="mail_content_middle">
+                        <textarea class="mail_content" placeholder="내용"></textarea>
+                    </div>
+                    <div class="mail_content_bottom">
+                        <div class="mail_file">
+                            <input type="file" name="">
+                            <input type="file" name="">
+                            <input type="file" name="">
+                        </div>
+                        <div class="mail_send">
+                            <input type="submit" value="보내기" class="send_btn">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <!-- <footer>
+        <div class="company_info">
+            <p style="font-size:12px">서울특별시 00구 00로 000</p>
+            <p style="font-size:12px">사업자등록번호: 000-00-00000</p>
+            <p style="font-size:12px">대표이사: 이개발</p>
+        </div>
+    </footer>   -->
+</body>
+</html>

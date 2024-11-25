@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS : 메일 보내기</title>
+    <link rel="stylesheet" href="/CIS/css/base.css"/>
+    <link rel="stylesheet" href="/CIS/css/mail_send.css"/>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="header_left">
+                <a href="emp_main">
+                    <img src="/img/logo.png" alt="Logo" class="logo_img">
+                    <div>
+                        <span class="logo_text">○○○ Company</span>
+                    </div>
+                </a>
+            </div>
+            <div class="header_right">
+                <div>
+                    <span class="login_user">○○○ 님</span>
+                </div>
+                <form action="" method="">
+                    <input type="button" value="로그아웃" class="logout_btn">
+                </form>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="email"><span>이메일</span></a></li>
+                <li><a href=""><span>게시판</span></a></li>
+                <li><a href=""><span>근태관리</span></a></li>
+                <li><a href=""><span>개인업무</span></a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="mail_container">
+                <form action="mail_insert"  method="post">
+                    <div class="mail_content_top">
+                        <div class="mail_title">
+                            <span>제목</span>
+                            <input type="text" placeholder="제목">
+                        </div>
+                        <div class="mail_recipient">
+                            <span>받는 사람</span>
+                            <input type="text" placeholder="받는 사람">
+                        </div>
+                    </div>
+                    <div class="mail_content_middle">
+                        <textarea class="mail_content" placeholder="내용"></textarea>
+                    </div>
+                    <div class="mail_content_bottom">
+                        <div class="mail_file">
+                            <input type="file" name="">
+                            <input type="file" name="">
+                            <input type="file" name="">
+                        </div>
+                        <div class="mail_send">
+                            <input type="submit" value="보내기" class="send_btn">
+                        </div>
+                    </div>s
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

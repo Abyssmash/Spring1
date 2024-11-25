@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS : 메일</title>
+    <link rel="stylesheet" href="/CIS/css/base.css"/>
+    <link rel="stylesheet" href="/CIS/css/email/mail.css"/>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="header_left">
+                <a href="emp_main">
+                    <img src="/img/logo.png" alt="Logo" class="logo_img">
+                    <div>
+                        <span class="logo_text">○○○ Company</span>
+                    </div>
+                </a>
+            </div>
+            <div class="header_right">
+                <div>
+                    <span class="login_user">○○○ 님</span>
+                </div>
+                <form action="" method="">
+                    <input type="button" value="로그아웃" class="logout_btn">
+                </form>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="email"><span>이메일</span></a></li>
+                <li><a href=""><span>게시판</span></a></li>
+                <li><a href=""><span>근태관리</span></a></li>
+                <li><a href=""><span>개인업무</span></a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="mail_container">
+                <div class="mail_btn">
+                    <a href="mail_send">
+                        <input type="button" value="메일쓰기" class="mail_send">
+                    </a>
+                    <!-- <a href="email_delete"> -->
+                    <!-- <a href=""> -->
+                        <input type="button" value="메일삭제" class="mail_delete">
+                    <!-- </a> -->
+                    <form action="" method="get">
+                        <input type="button" value="전체보기" class="mail_allread">
+                    </form>
+                    <form action="" method="get">
+                        <input type="button" value="안읽은메일보기" class="mail_unread">
+                    </form>
+                    <form action="" method="get">
+                        <input type="button" value="읽은메일보기" class="mail_read">
+                    </form>
+                </div>
+                <div class="mail_list">
+                    <table class="mail_table">
+                        <thead>
+                            <tr>
+                                <td style="width: 5%;"><input type="checkbox" class="all_check"></td>
+                                <td style="width: 65%;">제목</td>
+                                <td style="width: 15%;">보낸 사람</td>
+                                <td style="width: 15%;">날짜 / 시간</td>
+                            </tr>
+                            <tr id="mail_empty">
+                                <td colspan="4">메일이 비어있습니다.</td>
+                            </tr>
+                        </thead>
+                        <tbody id="mail_content">
+                            <tr>
+                                <td><input type="checkbox" class="one_check"></td>
+                                <td><a href="mail_detail" class="mail_detail">이곳은 제목이 들어갑니다.</a></td>
+                                <td><a href="mail_detail" class="mail_detail">일이삼사오육칠팔</a></td>
+                                <td><a href="mail_detail" class="mail_detail">2024-11-21 00:00</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="one_check"></td>
+                                <td><a href="mail_detail" class="mail_detail">이곳은 제목이 들어갑니다.</a></td>
+                                <td><a href="mail_detail" class="mail_detail">일이삼사오육칠팔</a></td>
+                                <td><a href="mail_detail" class="mail_detail">2024-11-21 00:00</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="one_check"></td>
+                                <td><a href="mail_detail" class="mail_detail">이곳은 제목이 들어갑니다.</a></td>
+                                <td><a href="mail_detail" class="mail_detail">일이삼사오육칠팔</a></td>
+                                <td><a href="mail_detail" class="mail_detail">2024-11-21 00:00</a></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="paging">
+                                <td colspan="4">
+                                    <a href="" style="font-weight: bold;">이전</a>
+                                    <a href="">1</a>
+                                    <a href="">2</a>
+                                    <a href="">3</a>
+                                    <a href="">4</a>
+                                    <a href="">5</a>
+                                    <a href="" style="font-weight: bold;">다음</a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="/CIS/js/mail.js"></script>
+</body>
+</html>
