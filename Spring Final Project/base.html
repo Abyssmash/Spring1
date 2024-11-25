@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    /* 해상도 : 1280x1024 */
+    /* width: 1280px;
+    height: 1024px; */
+    
+    /* 해상도 : 1152x864 */
+    width: 1152px;
+    height: 864px;
+
+    /* 해상도 : 1024x768 */
+    /* width: 1024px;
+    height: 768px; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .main {
+        width: 100%;
+        height: 90%;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 15px;
+    }
+    header {
+        width: 98%;
+        height: 13%;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        padding: 10px;
+
+        display: flex;
+    }
+    .header_left {
+        width: 50%;
+        padding-left: 15px;
+        
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .header_left * {
+        margin-right: 10px;
+    }
+    .header_left a {
+        color: black;
+        text-decoration: none;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .logo_img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+    .logo_text {
+        font-size: 25px;
+    }
+    .header_right {
+        width: 50%;
+        padding-right: 15px;
+        
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .header_right * {
+        margin-left: 10px;
+    }
+    .login_user {
+        font-size: 25px;
+    }
+    .logout_btn {
+        background-color: white;
+        font-size: 18px;
+        font-weight: bold;
+        width: 100px;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 15px;
+
+        cursor: pointer;
+    }
+    .logout_btn:hover {
+        background-color: skyblue;
+    }
+    .header_left span, .header_right span {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    nav {
+        width: 98%;
+        height: 8%;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        padding: 10px;
+
+        display: flex;
+        align-items: center;
+    }
+    nav ul {
+        padding-left: 20px;
+    }
+    nav ul li {
+        /* background-color: silver; */
+        font-weight: bold;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-right: 25px;
+        padding: 10px;
+
+        display: inline-block;
+        cursor: pointer;
+    }
+    nav ul li:hover {
+        background-color: skyblue;
+    }
+    nav ul li a {
+        color: black;
+        text-decoration: none;
+    }
+    nav ul li a span {
+        font-size: 20px;
+    }
+    section {
+        width: 98%;
+        height: 67%;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mail_container {
+        width: 97.3%;
+        height: 94%;
+        padding: 0 15px 15px 15px;
+    }
+    .mail_btn {
+        padding: 3px 10px 10px 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mail_btn input {
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 15px;
+        margin-right: 25px;
+        padding: 10px;
+
+        cursor: pointer;
+    }
+    .mail_delete {
+        background-color: red;
+        color: white;
+        border: 1px solid red;
+    }
+    .mail_delete:hover {
+        background-color: tomato;
+        border: 1px solid tomato;
+    }
+    .mail_send {
+        background-color: dodgerblue;
+        color: white;
+        border: 1px solid dodgerblue;
+    }
+    .mail_send:hover, .mail_allread:hover, .mail_unread:hover, .mail_read:hover {
+        background-color: skyblue;
+        border: 1px solid skyblue;
+    }
+    .mail_list {
+        border: 1px solid black;
+    }
+    .mail_table {
+        width: 100%;
+    }
+    .mail_table thead, .mail_table tbody, .mail_table tfoot {
+        text-align: center;
+    }
+    .mail_table tr td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+    .mail_table thead tr td {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .mail_detail {
+        color: black;
+        text-decoration: none;
+
+        display: block;
+    }
+    .mail_table tbody tr:hover .mail_detail {
+        color: #666666;
+    }
+    .paging td a {
+        color: black;
+        text-decoration: none;
+    }
+    .all_check, .one_check {
+        width: 30px;
+        height: 30px;
+    }
+</style>
+<body>
+    <div class="main">
+        <header>
+            <div class="header_left">
+                <a href="emp_main">
+                    <img src="/img/logo.png" alt="Logo" class="logo_img">
+                    <div>
+                        <span class="logo_text">○○○ Company</span>
+                    </div>
+                </a>
+            </div>
+            <div class="header_right">
+                <div>
+                    <span class="login_user">○○○ 님</span>
+                </div>
+                <form action="" method="">
+                    <input type="button" value="로그아웃" class="logout_btn">
+                </form>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="email"><span>이메일</span></a></li>
+                <li><a href=""><span>게시판</span></a></li>
+                <li><a href=""><span>근태관리</span></a></li>
+                <li><a href=""><span>개인업무</span></a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="mail_container">
+                <div class="mail_btn">
+                    <a href="mail_send">
+                        <input type="button" value="메일쓰기" class="mail_send">
+                    </a>
+                    <!-- <a href="email_delete"> -->
+                    <!-- <a href=""> -->
+                        <input type="button" value="메일삭제" class="mail_delete">
+                    <!-- </a> -->
+                    <form action="" method="get">
+                        <input type="button" value="전체보기" class="mail_allread">
+                    </form>
+                    <form action="" method="get">
+                        <input type="button" value="안읽은메일보기" class="mail_unread">
+                    </form>
+                    <form action="" method="get">
+                        <input type="button" value="읽은메일보기" class="mail_read">
+                    </form>
+                </div>
+                <div class="mail_list">
+                    <table class="mail_table">
+                        <thead>
+                            <tr>
+                                <td style="width: 5%;"><input type="checkbox" class="all_check"></td>
+                                <td style="width: 65%;">제목</td>
+                                <td style="width: 15%;">보낸 사람</td>
+                                <td style="width: 15%;">날짜 / 시간</td>
+                            </tr>
+                            <tr id="mail_empty">
+                                <td colspan="4">메일이 비어있습니다.</td>
+                            </tr>
+                        </thead>
+                        <tbody id="mail_content">
+                            <tr>
+                                <td><input type="checkbox" class="one_check"></td>
+                                <td><a href="mail_detail" class="mail_detail">이곳은 제목이 들어갑니다.</a></td>
+                                <td><a href="mail_detail" class="mail_detail">일이삼사오육칠팔</a></td>
+                                <td><a href="mail_detail" class="mail_detail">2024-11-21 00:00</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="one_check"></td>
+                                <td><a href="mail_detail" class="mail_detail">이곳은 제목이 들어갑니다.</a></td>
+                                <td><a href="mail_detail" class="mail_detail">일이삼사오육칠팔</a></td>
+                                <td><a href="mail_detail" class="mail_detail">2024-11-21 00:00</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="one_check"></td>
+                                <td><a href="mail_detail" class="mail_detail">이곳은 제목이 들어갑니다.</a></td>
+                                <td><a href="mail_detail" class="mail_detail">일이삼사오육칠팔</a></td>
+                                <td><a href="mail_detail" class="mail_detail">2024-11-21 00:00</a></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="paging">
+                                <td colspan="4">
+                                    <a href="" style="font-weight: bold;">이전</a>
+                                    <a href="">1</a>
+                                    <a href="">2</a>
+                                    <a href="">3</a>
+                                    <a href="">4</a>
+                                    <a href="">5</a>
+                                    <a href="" style="font-weight: bold;">다음</a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="/CIS/js/mail.js"></script>
+</body>
+</html>
