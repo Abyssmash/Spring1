@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>업무 보내기 화면</title>
 </head>
 <script>
     const taskmail = document.getElementById("container");
@@ -134,22 +134,21 @@ body{
         display: flex;
         margin-left: 40px;
         text-align: center;
-        margin-left: 100px;
+        margin-left: 150px;
         align-items: center;
     }
     .select_emp select{
-        margin-left: 20px;
+        margin-left: 30px;
     }
     .select_emp p{
-        margin-left: 20px; 
+        margin-left: 30px; 
     }
     .select_emp input{
-        margin-left: 20px;
+        margin-left: 30px;
     }
     .send_file{
         width: 800px;
         height: 50px;
-        background-color: aliceblue;
         display: inline-block;
         margin-top: 10px;
         margin-bottom: 20px;
@@ -235,12 +234,11 @@ body{
                 <option value="peroid6">2주</option>
                 <option value="peroid7">1달</option>
             </select>
-            <input type="file" accept="" name="select_file"> 
         </div>
         <div class="send_file">
-            <div style="height: 50px; overflow-y:scroll">
-                <p>선택한 파일 목록 (최대 3개)</p>
-            </div>
+            <input type="file" name="">
+            <input type="file" name="">
+            <input type="file" name="">
         </div>
         <div class="task_send_comment">
             <div style="height: 350px; overflow-y:scroll">
@@ -262,4 +260,5 @@ body{
     </div>
 </footer>  
 <!--<input type="submit"> 제출-->
+</body>
 </html>

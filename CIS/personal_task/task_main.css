@@ -27,6 +27,7 @@ section {
     margin-top: 10px;
     border-radius: 10px;
     border: 1px solid;
+    margin-left: 50px;
 }
 .progress_task h3{
     width: 50px;
@@ -128,11 +129,12 @@ section {
     color: gray;
 }
 footer{
-    width: 1230px;
+    width: 1250px;
     height: 80px;
     display: inline-block;
     margin-left: 10px;
     text-align: center;
+    align-items: center;
 }
 .company_info{
     color: rgb(88, 88, 88);

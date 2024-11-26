@@ -14,14 +14,10 @@ section {
 .container{
     width: 1000px;
     height: 600px;
-    border: 1px solid;
-    border-radius: 10px;
     display: inline-block;
-    margin-top: 5px;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(224, 224, 224);
-    margin-left: 100px;
+    border: 1px solid;
+    border-radius: 15px;
+    background-color: rgb(224, 224, 224);;
 }
 .task_detail_title{
     width: 800px;
@@ -34,33 +30,31 @@ section {
     font-size: 30px;
 }
 .select_emp{
-    width: 800px;
-    height: 30px;
+    width: 850px;
+    height: 40px;
     display: flex;
-    margin-top: 10px;
+    margin-left: 40px;
     text-align: center;
     margin-left: 150px;
     align-items: center;
 }
+.select_emp select{
+    margin-left: 30px;
+}
 .select_emp p{
-    margin-left: 20px;
+    margin-left: 30px; 
 }
-.file_name{
-    width: 90px;
-    height: 30px;
-    display: inline-block;
-    margin-top: 10px;
-    text-align: center;
+.select_emp input{
+    margin-left: 30px;
 }
-.receive_file{
-    width: 700px;
+.send_file{
+    width: 800px;
     height: 50px;
-    background-color: aliceblue;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
-.task_receive_comment{
+.task_send_comment{
     width: 800px;
     height: 350px;
     background-color: aliceblue;
@@ -78,8 +72,19 @@ footer{
 .company_info{
     color: rgb(88, 88, 88);
 }
-.back_button{
-    width: 100px;
-    height: 100px;
+.send_button{
+    width: 300px;
+    height: 50px;
     display: inline-block;
+}
+.scroll::-webkit-scrollbar {
+    width: 10px;
+    padding: 15px 15px 15px 0;
+}
+.scroll::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 20px;
+}
+.scroll::-webkit-scrollbar-track {
+    border-bottom: 20px;
 }
