@@ -4,12 +4,13 @@ body {
     height: 1024px;
     
     /* 해상도 : 1152x864 */
-    /* width: 1152px;
-    height: 864px; */
+    /*width: 1152px;*/
+    /*height: 864px;*/
 
     /* 해상도 : 1024x768 */
     /* width: 1024px;
     height: 768px; */
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,14 +20,15 @@ body {
     height: 90%;
     border: 1px solid black;
     border-radius: 10px;
+    margin-left: 15px;
     padding: 15px;
 }
 header {
     width: 98%;
-    height: 13%;
+    height: 10%;
     border: 1px solid black;
     border-radius: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 10px;
 
     display: flex;
@@ -125,11 +127,17 @@ nav ul li a {
 nav ul li a span {
     font-size: 20px;
 }
-/* footer{
-    width: 800px;
-    height: 90px;
-    border-radius: 15px;
-    display: inline-block;
+footer {
+    width: 100%;
+    height: auto;
     border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 10px;
+    display: inline-block;
     text-align: center;
-} */
+    align-items: center;
+}
+footer p {
+    font-size: 12px;
+    margin: 10px auto;
+}
